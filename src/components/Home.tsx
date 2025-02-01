@@ -1,5 +1,6 @@
 import { HomeContainer, StyledTitle, StyledSubtitle} from '../styles/customStyles';
 import { Box } from '@mui/material';
+import img from '../assets/img.png';
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
             Junior Front-End Developer passionate about building intuitive and effective user interfaces.
           </StyledSubtitle>
         </Box>
-        <img src="../assets/img.png" alt="Soa Mariaka" width="300" />
+        <img src={img} alt="Soa Mariaka" />
       </Box>
     </HomeContainer>
   );
