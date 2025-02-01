@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer, Box } from '@mui/material';
 
 interface SkillIconProps {
   color?: string;  
@@ -47,6 +47,25 @@ export const StyledTitle = styled(Typography)(({ theme }) => ({
 export const StyledSubtitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.fontFamily,
   color: theme.palette.secondary.main,
+}));
+
+export const StyledHomeBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  paddingTop: '80px',
+  flexDirection: 'column', 
+  [theme.breakpoints.up('md')]: {
+    flexDirection: 'row', 
+  },
+}));
+
+export const StyledImage = styled('img')(({ theme }) => ({
+  width: '100%', 
+  maxWidth: '600px',
+  [theme.breakpoints.down('md')]: {
+    maxWidth: '400px', 
+  },
 }));
 
 export const SkillIcon = styled('div')<SkillIconProps>(({color}) => ({
