@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { AppBar, Toolbar, Button, Typography, List, Link, Fab } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer } from '@mui/material';
 
 interface SkillIconProps {
   color?: string;  
@@ -10,17 +10,29 @@ export const StyledNavbar = styled(AppBar)(() => ({
   position: 'sticky',
 }));
 
-export const StyledToolbar = styled(Toolbar)({
+export const StyledToolbar = styled(Toolbar)(() => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-});
+}));
 
 export const StyledButton = styled(Button)<{component?: React.ElementType; to?: string; target?: string}>(({ theme }) => ({
   color: theme.palette.common.white,
   fontWeight: 'bold',
   padding: '10px',
   fontFamily: theme.typography.fontFamily,
+}));
+
+export const StyledDrawer = styled(Drawer)(({ theme }) => ({
+  '& .MuiDrawer-paper': {
+    padding: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: theme.palette.primary.main,
+  },
+  [theme.breakpoints.up('md')]: {
+    display: 'none',
+  },
 }));
 
 export const HomeContainer = styled('div')({
