@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer, Box, Grid, TextField } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, Fab, Drawer, Box, Grid, TextField } from '@mui/material';
 
 interface SkillIconProps {
   color?: string;  
@@ -105,14 +105,6 @@ export const SkillIcon = styled('div')<SkillIconProps>(({color}) => ({
   },
 }));
 
-export const StyledFormContainer = styled(Box)({
-  paddingTop: '50px',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  minHeight: '100vh',
-});
-
 export const StyledForm = styled('form')({
   width: '100%',
   maxWidth: '1000px',  
@@ -128,40 +120,6 @@ export const StyledFormButton = styled(Button)({
   marginTop: '10px',
 });
 
-export const StyledFooter = styled('footer')({
-  padding: '20px',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-});
-
-export const LeftSection = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'flex-start',
-  marginLeft: '30rem'
-})
-
-export const NavList = styled(List)(({theme})=>({
-  '& li': {
-    padding: '5px 0',
-  },
-  fontFamily: theme.typography.fontFamily,
-}));
-
-export const RightSection = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  marginRight: '30rem'
-})
-
-export const SocialIcons = styled('div')({
-  display: 'flex',
-  gap: '10px',
-  marginTop: '5px',
-});
-
 export const StyledContactContainer = styled('div')({
   border: '1px solid #ddd', 
   padding: '20px',
@@ -169,10 +127,6 @@ export const StyledContactContainer = styled('div')({
   maxWidth: '1200px',
   borderRadius: '8px', 
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-});
-
-export const NavLink = styled(Link)<{to?: string}>({
-  textDecoration: 'none',
 });
 
 export const StyledFab = styled(Fab)(({ theme }) => ({
