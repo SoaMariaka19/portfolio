@@ -68,6 +68,11 @@ export const StyledImage = styled('img')(({ theme }) => ({
   },
 }));
 
+export const StyledLink = styled('a')(() => ({
+  color: 'white',
+  textDecoration: 'none',
+}));
+
 export const StyledGridContainer = styled(Grid)({
   maxWidth: '1200px',
   margin: '0 auto',

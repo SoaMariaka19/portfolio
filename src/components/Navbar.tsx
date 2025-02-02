@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
-import { StyledNavbar, StyledToolbar, StyledButton, StyledDrawer } from '../styles/customStyles'; 
+import { StyledNavbar, StyledToolbar, StyledButton, StyledDrawer, StyledLink } from '../styles/customStyles'; 
 import { Typography, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -41,7 +41,9 @@ const Navbar = () => {
             <Link to="contact" smooth duration={500}>Contact</Link>
           </StyledButton>
           <StyledButton>
-            <Link to="home" smooth duration={500}>Download CV</Link>
+            <StyledLink href="/cv.pdf" download>
+              Download CV
+            </StyledLink>
           </StyledButton>
         </StyledDrawer>
 
@@ -56,7 +58,9 @@ const Navbar = () => {
             <Link to="contact" smooth duration={500}>Contact</Link>
           </StyledButton>
           <StyledButton>
-            <Link to="home" smooth duration={500}>Download CV</Link>
+            <StyledLink href="/cv.pdf" download>
+                Download CV
+              </StyledLink>
           </StyledButton>
         </Box>
       </StyledToolbar>
