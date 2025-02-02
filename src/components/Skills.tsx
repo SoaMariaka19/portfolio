@@ -10,12 +10,12 @@ import { SiAxios } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { SkillIcon } from '../styles/customStyles';
+import { SkillIcon, StyledGridContainer } from '../styles/customStyles';
 
 const Skills = () => {
   return (
-    <Box id="skills" paddingTop="80px">
-      <Grid container spacing={2} justifyContent="center">
+    <Box id="skills" paddingTop="150px">
+      <StyledGridContainer container spacing={10} justifyContent="center">
         <Grid item>
           <SkillIcon color="#61DBFB">
             <FaReact />
@@ -82,7 +82,7 @@ const Skills = () => {
             <Typography>PostgreSQL</Typography>
           </SkillIcon>
         </Grid>
-      </Grid>
+      </StyledGridContainer>
     </Box>
   );
 };

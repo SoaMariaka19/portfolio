@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer, Box } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer, Box, Grid } from '@mui/material';
 
 interface SkillIconProps {
   color?: string;  
@@ -68,16 +68,22 @@ export const StyledImage = styled('img')(({ theme }) => ({
   },
 }));
 
+export const StyledGridContainer = styled(Grid)({
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '0 10px',
+})
+
 export const SkillIcon = styled('div')<SkillIconProps>(({color}) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   '& p': {
-    fontSize: '14px',
+    fontSize: '15px',
   },
   '& svg': {
-    width: '50px',
-    height: '50px',
+    width: '100px',
+    height: '100px',
     animation: 'pulse 1s infinite',
     fill: color || '#000',
   },
