@@ -5,18 +5,19 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
-
+import './index.css';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <>
       <Navbar/>
       <Home/>
       <Skills/>
       <Contact/>
       <Footer/>
       <BackToTop/>
-    </div>
+    </>
+
   );
 };
 
