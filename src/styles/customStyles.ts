@@ -73,16 +73,18 @@ export const StyledLink = styled('a')(() => ({
   textDecoration: 'none',
 }));
 
-export const StyledGridContainer = styled(Grid)({
+export const StyledGridContainer = styled(Grid)(()=> ({
   maxWidth: '1200px',
   margin: '0 auto',
   padding: '0 10px',
-})
+  width: '100%',
+}))
 
-export const SkillIcon = styled('div')<SkillIconProps>(({color}) => ({
+export const SkillIcon = styled('div')<SkillIconProps>(({color, theme}) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  minWidth: '80px',
   '& p': {
     fontSize: '15px',
   },
@@ -102,6 +104,34 @@ export const SkillIcon = styled('div')<SkillIconProps>(({color}) => ({
     '100%': {
       transform: 'scale(1)',
     },
+  },
+  [theme.breakpoints.down('md')]: {
+    '& svg': {
+      width: '80px',
+      height: '80px',
+    },
+    '& p': {
+      fontSize: '14px',
+    },
+  },
+  [theme.breakpoints.down('sm')]: {
+    '& svg': {
+      width: '60px',
+      height: '60px',
+    },
+    '& p': {
+      fontSize: '13px',
+    },
+  },
+}));
+
+export const StyledSkillsContainer = styled(Box)(({ theme }) => ({
+  paddingTop: '20px',
+  paddingBottom: '50px',
+  backgroundColor: '#f4f4f4',
+  overflow: 'hidden',
+  [theme.breakpoints.down('md')]: {
+    paddingTop: '20px',
   },
 }));
 
