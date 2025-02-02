@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer, Box, Grid } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, List, Link, Fab, Drawer, Box, Grid, TextField } from '@mui/material';
 
 interface SkillIconProps {
   color?: string;  
@@ -99,6 +99,29 @@ export const SkillIcon = styled('div')<SkillIconProps>(({color}) => ({
     },
   },
 }));
+
+export const StyledFormContainer = styled(Box)({
+  paddingTop: '50px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  minHeight: '100vh',
+});
+
+export const StyledForm = styled('form')({
+  width: '100%',
+  maxWidth: '1000px',  
+  padding: '20px',
+  boxSizing: 'border-box',
+});
+
+export const StyledTextField = styled(TextField)({
+  marginBottom: '15px',  
+});
+
+export const StyledFormButton = styled(Button)({
+  marginTop: '10px',
+});
 
 export const StyledFooter = styled('footer')({
   padding: '20px',
