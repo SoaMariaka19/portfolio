@@ -1,23 +1,43 @@
-import { Typography } from '@mui/material';
-import { StyledForm, StyledFormButton, StyledFormContainer, StyledTextField } from '../styles/customStyles';
+import { Typography, Grid, IconButton, Box } from '@mui/material';
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { StyledForm, StyledFormButton, StyledContactContainer, StyledTextField } from '../styles/customStyles';
 
 const Contact = () => {
   return (
-    <StyledFormContainer id='contact'>
-      <StyledForm >
-        <Typography variant="h6" style={{ marginBottom: '20px', textAlign: 'center' }}>
-          Do you have a project or an opportunity to discuss? Feel free to contact me, I would be happy to connect with you!
-        </Typography>
+    <StyledContactContainer id='contact'>
+      <Grid container spacing={4} justifyContent="center" alignItems="center">
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h6" style={{ marginBottom: '20px' }}>
+            Do you have a project or an opportunity to discuss? Feel free to contact me, I would be happy to connect with you!
+          </Typography>
+          <Box>
+            <Typography variant="body1">Follow me:</Typography>
+            <Box sx={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+              <IconButton component="a" href="https://www.linkedin.com/in/soa-mariaka-rakotomalala-42a30a278/" target="_blank" color="inherit">
+                <FaLinkedin />
+              </IconButton>
+              <IconButton component="a" href="https://github.com/SoaMariaka19/" target="_blank" color="inherit">
+                <FaGithub />
+              </IconButton>
+              <IconButton component="a" href="mailto:soamariakarakotomalala@gmail.com" color="inherit">
+                <FaEnvelope />
+              </IconButton>
+            </Box>
+          </Box>
+        </Grid>
 
-        <StyledTextField label="Nom" variant="outlined" fullWidth margin="normal" />
-        <StyledTextField label="Email" variant="outlined" fullWidth margin="normal" />
-        <StyledTextField label="Message" variant="outlined" fullWidth multiline rows={4} margin="normal" />
-        <StyledFormButton type="submit" variant="contained" color="primary">
-          Envoyer
-        </StyledFormButton>
-      </StyledForm>
-    </StyledFormContainer>
-    
+        <Grid item xs={12} sm={6}>
+          <StyledForm>
+            <StyledTextField label="Nom" variant="outlined" fullWidth margin="normal" />
+            <StyledTextField label="Email" variant="outlined" fullWidth margin="normal" />
+            <StyledTextField label="Message" variant="outlined" fullWidth multiline rows={4} margin="normal" />
+            <StyledFormButton type="submit" variant="contained" color="primary">
+              Envoyer
+            </StyledFormButton>
+          </StyledForm>
+        </Grid>
+      </Grid>
+    </StyledContactContainer>
   );
 };
 

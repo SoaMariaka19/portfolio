@@ -162,6 +162,15 @@ export const SocialIcons = styled('div')({
   marginTop: '5px',
 });
 
+export const StyledContactContainer = styled('div')({
+  border: '1px solid #ddd', 
+  padding: '20px',
+  margin: '200px auto',
+  maxWidth: '1200px',
+  borderRadius: '8px', 
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+});
+
 export const NavLink = styled(Link)<{to?: string}>({
   textDecoration: 'none',
 });
