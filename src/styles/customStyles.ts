@@ -153,11 +153,20 @@ export const StyledFormButton = styled(Button)({
 export const StyledContactContainer = styled('div')({
   border: '1px solid #ddd', 
   padding: '20px',
-  margin: '200px auto',
+  margin: '100px auto',
   maxWidth: '1200px',
   borderRadius: '8px', 
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
 });
+
+export const StyledTypography = styled(Typography)(({ theme }) => ({
+  color: theme.palette.primary.main, 
+  marginBottom: '20px',
+
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '14px', 
+  },
+}));
 
 export const StyledFab = styled(Fab)(({ theme }) => ({
   position: 'fixed',

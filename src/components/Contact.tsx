@@ -1,15 +1,15 @@
 import { Typography, Grid, IconButton, Box } from '@mui/material';
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import { StyledForm, StyledFormButton, StyledContactContainer, StyledTextField } from '../styles/customStyles';
+import { StyledForm, StyledFormButton, StyledContactContainer, StyledTextField, StyledTypography } from '../styles/customStyles';
 
 const Contact = () => {
   return (
     <StyledContactContainer id='contact'>
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         <Grid item xs={12} sm={6}>
-          <Typography variant="h6" style={{ marginBottom: '20px' }}>
+          <StyledTypography variant="h6" style={{ marginBottom: '20px' }}>
             Do you have a project or an opportunity to discuss? Feel free to contact me, I would be happy to connect with you!
-          </Typography>
+          </StyledTypography>
           <Box>
             <Typography variant="body1">Follow me:</Typography>
             <Box sx={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
