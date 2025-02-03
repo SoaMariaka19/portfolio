@@ -10,7 +10,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Cardo, serif',
+    fontFamily: 'Ysabeau Infant, serif',
   }
 });
 

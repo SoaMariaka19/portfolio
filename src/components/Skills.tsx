@@ -16,6 +16,24 @@ import { SkillIcon, StyledGridContainer, StyledSkillsContainer } from '../styles
 const Skills = () => {
   return (
     <StyledSkillsContainer id="skills">
+      <Typography variant="h4" color="#691143" align="center" 
+          sx={{ 
+            fontFamily: (theme) => theme.typography.fontFamily,
+            fontSize: { xs: "1.7rem", sm: "2rem" }
+          }}
+          gutterBottom
+      >
+        MY SKILLS
+      </Typography>
+      <Typography variant="h6" color="#691143" align="center" 
+          sx={{ 
+            fontFamily: (theme) => theme.typography.fontFamily,
+            fontSize: { xs: "1.1rem", sm: "1.3rem" }
+          }}
+            paragraph
+      >
+        Transforming ideas into seamless and engaging user experiences.
+      </Typography>
       <StyledGridContainer container spacing={3} justifyContent="center">
         <Grid item xs={4} sm={3} md={2}>
           <motion.div

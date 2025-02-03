@@ -195,7 +195,7 @@ export const StyledTypography = styled(Typography)(({ theme }) => ({
   marginBottom: '20px',
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '14px', 
+    fontSize: '1.1rem', 
   },
 }));
 
