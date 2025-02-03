@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
-import { StyledNavbar, StyledToolbar, StyledButton, StyledDrawer, StyledLink } from '../styles/customStyles'; 
-import { Typography, IconButton, Box } from '@mui/material';
+import { StyledNavbar, StyledToolbar, StyledButton, StyledDrawer, StyledLink, StyledNavTypography } from '../styles/customStyles'; 
+import { IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -15,9 +15,9 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <StyledToolbar>
-        <Typography variant="h6" color="inherit">
+        <StyledNavTypography variant="h6">
           Soa Mariaka's Portfolio
-        </Typography>
+        </StyledNavTypography>
 
         <IconButton edge="end" color="inherit" onClick={toggleDrawer} sx={{ display: { sm: 'none' } }}>
           {open ? <CloseIcon /> : <MenuIcon />}

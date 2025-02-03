@@ -1,19 +1,18 @@
-import { HomeContainer, StyledTitle, StyledSubtitle, StyledHomeBox, StyledImage } from '../styles/customStyles';
+import { HomeContainer, StyledTitle, StyledSubtitle, StyledHomeBox, StyledImage, StyledTextBox } from '../styles/customStyles';
 import img from '../assets/img.png';
-import { Box } from '@mui/material';
 
 const Home = () => {
   return (
     <HomeContainer id="home">
       <StyledHomeBox>
-        <Box>
-          <StyledTitle variant="h2" gutterBottom>
-            Hello! I'm Soa Mariaka
+        <StyledTextBox>
+          <StyledTitle gutterBottom>
+            Hello! <br/> I'm Soa Mariaka
           </StyledTitle>
-          <StyledSubtitle variant="h5" paragraph>
-            Junior Front-End Developer, passionate about creating intuitive and efficient interfaces. Curious and motivated, I'm constantly learning and evolving to improve. My goal? Build a fulfilling career in web development          
+          <StyledSubtitle paragraph>
+            Junior Front-End Developer, passionate about creating intuitive and efficient interfaces.<br/> Curious and motivated, I'm constantly learning and evolving to improve.<br/> My goal? Build a fulfilling career in web development          
           </StyledSubtitle>
-        </Box>
+        </StyledTextBox>
         <StyledImage src={img} alt="Soa Mariaka"/>
       </StyledHomeBox>
     </HomeContainer>

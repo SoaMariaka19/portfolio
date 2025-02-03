@@ -17,7 +17,7 @@ export const StyledToolbar = styled(Toolbar)(() => ({
 }));
 
 export const StyledButton = styled(Button)<{component?: React.ElementType; to?: string; target?: string}>(({ theme }) => ({
-  color: theme.palette.common.white,
+  color: '#691143',
   fontWeight: 'bold',
   padding: '10px',
   fontFamily: theme.typography.fontFamily,
@@ -35,18 +35,32 @@ export const StyledDrawer = styled(Drawer)(({ theme }) => ({
   },
 }));
 
+export const StyledNavTypography = styled(Typography)(() => ({
+  color: '#691143', 
+}));
+
 export const HomeContainer = styled('div')({
   padding: '12px',
 });
 
 export const StyledTitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.fontFamily,
-  color: theme.palette.primary.main,
+  color: '#691143',
+  fontSize: theme.typography.h2.fontSize,
+  
+  [theme.breakpoints.down("sm")]: {
+    fontSize: theme.typography.h4.fontSize,
+  },
 }));
 
 export const StyledSubtitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.fontFamily,
-  color: theme.palette.secondary.main,
+  color: '#691143',
+  fontSize: theme.typography.h5.fontSize,
+  
+  [theme.breakpoints.down("sm")]: {
+    fontSize: theme.typography.h6.fontSize,
+  },
 }));
 
 export const StyledHomeBox = styled(Box)(({ theme }) => ({
@@ -60,16 +74,29 @@ export const StyledHomeBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+export const StyledTextBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  paddingLeft: "200px", 
+  textAlign: "left",
+
+  [theme.breakpoints.down("sm")]: {
+    paddingLeft: "0px", 
+    paddingBottom: '0px',
+  },
+}));
+
 export const StyledImage = styled('img')(({ theme }) => ({
   width: '100%', 
-  maxWidth: '600px',
+  maxWidth: '500px',
   [theme.breakpoints.down('md')]: {
     maxWidth: '400px', 
   },
 }));
 
 export const StyledLink = styled('a')(() => ({
-  color: 'white',
+  color: '#691143',
   textDecoration: 'none',
 }));
 
@@ -146,9 +173,11 @@ export const StyledTextField = styled(TextField)({
   marginBottom: '15px',  
 });
 
-export const StyledFormButton = styled(Button)({
+export const StyledFormButton = styled(Button)(({theme})=>({
   marginTop: '10px',
-});
+  backgroundColor: '#691143',
+  color: theme.palette.secondary.main,
+}));
 
 export const StyledContactContainer = styled('div')({
   border: '1px solid #ddd', 
@@ -160,7 +189,7 @@ export const StyledContactContainer = styled('div')({
 });
 
 export const StyledTypography = styled(Typography)(({ theme }) => ({
-  color: theme.palette.primary.main, 
+  color: '#691143', 
   marginBottom: '20px',
 
   [theme.breakpoints.down('sm')]: {
@@ -172,7 +201,7 @@ export const StyledFab = styled(Fab)(({ theme }) => ({
   position: 'fixed',
   bottom: '20px',
   right: '20px',
-  backgroundColor: theme.palette.primary.main, 
+  backgroundColor: '#691143', 
   color: '#fff', 
   '&:hover': {
     backgroundColor: theme.palette.primary.dark, 
