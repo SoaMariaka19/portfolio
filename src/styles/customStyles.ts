@@ -90,8 +90,10 @@ export const StyledTextBox = styled(Box)(({ theme }) => ({
 export const StyledImage = styled('img')(({ theme }) => ({
   width: '100%', 
   maxWidth: '500px',
+  paddingRight: '150px',
   [theme.breakpoints.down('md')]: {
     maxWidth: '400px', 
+    paddingRight: '0px',
   },
 }));
 

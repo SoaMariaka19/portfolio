@@ -28,7 +28,7 @@ const Navbar = () => {
           open={open}
           onClose={toggleDrawer}
         >
-          <IconButton onClick={toggleDrawer} sx={{alignSelf: 'flex-end', color: 'white'}}>
+          <IconButton onClick={toggleDrawer} sx={{alignSelf: 'flex-end', color: 'black'}}>
             <CloseIcon/>
           </IconButton>
           <StyledButton>
