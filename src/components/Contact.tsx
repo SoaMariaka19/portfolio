@@ -1,8 +1,31 @@
+import React, { useRef } from 'react';
 import { Typography, Grid, IconButton, Box } from '@mui/material';
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { StyledForm, StyledFormButton, StyledContactContainer, StyledTextField, StyledTypography } from '../styles/customStyles';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null); 
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (form.current) { 
+      emailjs
+        .sendForm('service_5zmjd59', 'template_dhx5qzk', form.current, {
+          publicKey: 'nDkqitaE9l0p9K29Z',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          }
+        );
+    }
+  };
+
   return (
     <StyledContactContainer id='contact'>
       <Grid container spacing={4} justifyContent="center" alignItems="center">
@@ -27,10 +50,10 @@ const Contact = () => {
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <StyledForm>
-            <StyledTextField label="Nom" variant="outlined" fullWidth margin="normal" />
-            <StyledTextField label="Email" variant="outlined" fullWidth margin="normal" />
-            <StyledTextField label="Message" variant="outlined" fullWidth multiline rows={4} margin="normal" />
+          <StyledForm ref={form} onSubmit={sendEmail}>
+            <StyledTextField label="Nom" variant="outlined" fullWidth margin="normal" name="user_name" />
+            <StyledTextField label="Email" variant="outlined" fullWidth margin="normal" name="user_email" />
+            <StyledTextField label="Message" variant="outlined" fullWidth multiline rows={4} margin="normal" name="message" />
             <StyledFormButton type="submit" variant="contained" color="primary">
               Envoyer
             </StyledFormButton>
