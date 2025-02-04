@@ -8,10 +8,10 @@ const Contact = () => {
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         <Grid item xs={12} sm={6}>
           <StyledTypography variant="h6" style={{ marginBottom: '20px' }}>
-            Do you have a project or an opportunity to discuss? Feel free to contact me, I would be happy to connect with you!
+            Let's work together to bring your projects to life. Contact me, I'm here to help you make it happen!
           </StyledTypography>
           <Box>
-            <Typography variant="body1">Follow me:</Typography>
+            <Typography variant="body1">Follow me on:</Typography>
             <Box sx={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
               <IconButton component="a" href="https://www.linkedin.com/in/soa-mariaka-rakotomalala-42a30a278/" target="_blank" color="inherit">
                 <FaLinkedin />
