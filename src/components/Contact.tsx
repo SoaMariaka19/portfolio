@@ -1,18 +1,19 @@
 import React, { useRef, useState } from 'react';
-import { Typography, Grid, IconButton, Box, Snackbar } from '@mui/material';
+import { Typography, Grid, IconButton, Box, Snackbar, Alert } from '@mui/material';
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { StyledForm, StyledFormButton, StyledContactContainer, StyledTextField, StyledTypography } from '../styles/customStyles';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
-  const [alertMessage, setAlertMessage] = useState<string>('');
-  const [openAlert, setOpenAlert] = useState<boolean>(false);
+  const form = useRef<HTMLFormElement>(null); 
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertType, setAlertType] = useState<'success' | 'error'>('success');
+  const [openAlert, setOpenAlert] = useState(false);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (form.current) {
+    if (form.current) { 
       emailjs
         .sendForm('service_5zmjd59', 'template_dhx5qzk', form.current, {
           publicKey: 'nDkqitaE9l0p9K29Z',
@@ -20,16 +21,17 @@ const Contact = () => {
         .then(
           () => {
             setAlertMessage('Message envoyé avec succès!');
+            setAlertType('success');
             setOpenAlert(true);
             form.current?.reset(); 
           },
           (error) => {
             setAlertMessage(`Échec de l'envoi: ${error.text}`);
+            setAlertType('error');
             setOpenAlert(true);
           }
         );
     }
-    
   };
 
   const handleCloseAlert = () => {
@@ -71,12 +73,11 @@ const Contact = () => {
         </Grid>
       </Grid>
 
-      <Snackbar
-        open={openAlert}
-        autoHideDuration={6000}
-        onClose={handleCloseAlert}
-        message={alertMessage}
-      />
+      <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleCloseAlert}>
+        <Alert onClose={handleCloseAlert} severity={alertType} sx={{ width: '100%' }}>
+          {alertMessage}
+        </Alert>
+      </Snackbar>
     </StyledContactContainer>
   );
 };
