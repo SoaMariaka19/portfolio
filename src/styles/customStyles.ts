@@ -142,6 +142,18 @@ export const SkillIcon = styled('div')<SkillIconProps>(({color, theme}) => ({
   },
 }));
 
+export const IconImage = styled("img")(({ theme }) => ({
+  width: "100%",
+  height: "auto",
+  maxWidth: 110, 
+  [theme.breakpoints.down("md")]: {
+    maxWidth: 100, 
+  },
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: 60, 
+  },
+}));
+
 export const StyledSkillsContainer = styled(Box)(({ theme }) => ({
   paddingTop: '20px',
   paddingBottom: '50px',

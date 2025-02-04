@@ -10,7 +10,8 @@ import { FaGitAlt } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { SkillIcon, StyledGridContainer, StyledSkillsContainer } from '../styles/customStyles';
+import figma from '../assets/figma.png';
+import { SkillIcon, StyledGridContainer, StyledSkillsContainer, IconImage } from '../styles/customStyles';
 
 const Skills = () => {
   return (
@@ -115,6 +116,18 @@ const Skills = () => {
             <SkillIcon color="#007fff">
               <SiMui />
               <Typography>Material UI</Typography>
+            </SkillIcon>
+          </motion.div>
+        </Grid>
+        <Grid item xs={4} sm={3} md={2}>
+          <motion.div
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+            animate={{ y: [0, 10, 0], rotate: [0, 5, 0] }}
+            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
+          >
+            <SkillIcon>
+              <IconImage src={figma} />
+              <Typography>Figma</Typography>
             </SkillIcon>
           </motion.div>
         </Grid>
