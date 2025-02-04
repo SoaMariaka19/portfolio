@@ -1,29 +1,39 @@
-import React, { useRef } from 'react';
-import { Typography, Grid, IconButton, Box } from '@mui/material';
+import React, { useRef, useState } from 'react';
+import { Typography, Grid, IconButton, Box, Snackbar } from '@mui/material';
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { StyledForm, StyledFormButton, StyledContactContainer, StyledTextField, StyledTypography } from '../styles/customStyles';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null); 
+  const form = useRef<HTMLFormElement>(null);
+  const [alertMessage, setAlertMessage] = useState<string>('');
+  const [openAlert, setOpenAlert] = useState<boolean>(false);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (form.current) { 
+    if (form.current) {
       emailjs
         .sendForm('service_5zmjd59', 'template_dhx5qzk', form.current, {
           publicKey: 'nDkqitaE9l0p9K29Z',
         })
         .then(
           () => {
-            console.log('SUCCESS!');
+            setAlertMessage('Message envoyé avec succès!');
+            setOpenAlert(true);
+            form.current?.reset(); 
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            setAlertMessage(`Échec de l'envoi: ${error.text}`);
+            setOpenAlert(true);
           }
         );
     }
+    
+  };
+
+  const handleCloseAlert = () => {
+    setOpenAlert(false);
   };
 
   return (
@@ -60,6 +70,13 @@ const Contact = () => {
           </StyledForm>
         </Grid>
       </Grid>
+
+      <Snackbar
+        open={openAlert}
+        autoHideDuration={6000}
+        onClose={handleCloseAlert}
+        message={alertMessage}
+      />
     </StyledContactContainer>
   );
 };
