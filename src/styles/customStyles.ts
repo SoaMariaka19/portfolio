@@ -120,19 +120,7 @@ export const SkillIcon = styled('div')<SkillIconProps>(({color, theme}) => ({
   '& svg': {
     width: '100px',
     height: '100px',
-    animation: 'pulse 1s infinite',
     fill: color || '#000',
-  },
-  '@keyframes pulse': {
-    '0%': {
-      transform: 'scale(1)',
-    },
-    '50%': {
-      transform: 'scale(1.1)',
-    },
-    '100%': {
-      transform: 'scale(1)',
-    },
   },
   [theme.breakpoints.down('md')]: {
     '& svg': {
@@ -173,6 +161,14 @@ export const StyledForm = styled('form')({
 
 export const StyledTextField = styled(TextField)({
   marginBottom: '15px',  
+  '& label.Mui-focused': {
+    color: '#59555B',
+  },
+  '& .MuiOutlinedInput-root': {
+    '&.Mui-focused fieldset': {
+      borderColor: '#59555B',
+    },
+  },
 });
 
 export const StyledFormButton = styled(Button)(({theme})=>({

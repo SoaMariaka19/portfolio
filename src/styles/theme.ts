@@ -10,7 +10,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Ysabeau Infant, serif',
+    fontFamily: 'EB Garamond, serif',
   }
 });
 

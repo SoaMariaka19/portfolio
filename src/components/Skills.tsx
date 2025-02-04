@@ -32,7 +32,7 @@ const Skills = () => {
           }}
             paragraph
       >
-        Transforming ideas into seamless and engaging user experiences.
+        Transforming ideas into seamless and engaging user experiences
       </Typography>
       <StyledGridContainer container spacing={3} justifyContent="center">
         <Grid item xs={4} sm={3} md={2}>
