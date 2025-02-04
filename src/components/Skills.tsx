@@ -6,7 +6,6 @@ import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMui } from "react-icons/si";
-import { SiAxios } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -116,18 +115,6 @@ const Skills = () => {
             <SkillIcon color="#007fff">
               <SiMui />
               <Typography>Material UI</Typography>
-            </SkillIcon>
-          </motion.div>
-        </Grid>
-        <Grid item xs={4} sm={3} md={2}>
-          <motion.div
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-            animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
-            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-          >
-            <SkillIcon color="#5a29e4">
-              <SiAxios />
-              <Typography>Axios</Typography>
             </SkillIcon>
           </motion.div>
         </Grid>

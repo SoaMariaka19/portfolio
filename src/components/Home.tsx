@@ -10,8 +10,9 @@ const Home = () => {
             Hello! <br/> I'm Soa Mariaka
           </StyledTitle>
           <StyledSubtitle paragraph>
-            Passionate about Front-End development, I love bringing interfaces to life with the perfect blend of aesthetics, fluidity, and performance. <br/>
-            What drives me? Finding creative solutions, learning every day, and collaborating with inspiring people. Curious and detail-oriented, I enjoy tackling challenges and refining every aspect to deliver the best possible user experience. I like to keep things structured and efficient while maintaining a relaxed and positive mindset—something you’ll find reflected in my work.<br/> My goal: to create seamless, engaging, and memorable digital experiences
+            A Front-End Developer passionate about creating clean, intuitive, and engaging interfaces. <br/>
+            What drives me? Finding creative solutions, learning every day, and collaborating with inspiring people. I take my work seriously, but I believe the best results come from a relaxed and positive mindset. <br/>
+            My goal? Build seamless and memorable digital experiences that make an impact.          
           </StyledSubtitle>
         </StyledTextBox>
         <StyledImage src={img} alt="Soa Mariaka"/>
