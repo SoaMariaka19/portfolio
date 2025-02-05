@@ -112,7 +112,7 @@ const Contact = () => {
               onChange={handleChange}
               error={!!emailError}
               helperText={emailError}
-              FormHelperTextProps={{ sx: { fontSize: '1.2rem' } }}
+              FormHelperTextProps={{ sx: { fontSize: '1.1rem' } }}
               InputProps={{ style: { fontSize: '1.2rem' } }}
               InputLabelProps={{ style: { fontSize: '1rem' } }} 
             />
