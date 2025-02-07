@@ -1,4 +1,4 @@
-# Soa Mariaka's Portfolio
+# ![Logo](https://raw.githubusercontent.com/SoaMariaka19/portfolio/main/public/logo.svg) Soa Mariaka's Portfolio
 
 Welcome to my portfolio! 🚀 This project showcases my front-end development skills through a modern and intuitive interface.  
 
