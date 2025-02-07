@@ -1,4 +1,4 @@
-# ![Icon](https://raw.githubusercontent.com/SoaMariaka19/portfolio/main/public/logo.svg) Soa Mariaka's Portfolio
+# <img src="https://raw.githubusercontent.com/SoaMariaka19/portfolio/main/public/logo.svg" width="32" height="32" /> Soa Mariaka's Portfolio
 
 Welcome to my portfolio! 🚀 This project showcases my front-end development skills through a modern and intuitive interface.  
 
