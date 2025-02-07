@@ -19,7 +19,7 @@ const Contact = () => {
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setEmailError("Format d'email invalide");
+      setEmailError("Invalid email format");
     } else {
       setEmailError('');
     }
@@ -44,7 +44,7 @@ const Contact = () => {
         })
         .then(
           () => {
-            setAlertMessage('Message envoyé avec succès!');
+            setAlertMessage('Message sent successfully !');
             setAlertType('success');
             setOpenAlert(true);
             setFormData({ user_name: '', user_email: '', message: '' });
@@ -52,7 +52,7 @@ const Contact = () => {
             form.current?.reset();
           },
           (error) => {
-            setAlertMessage(`Échec de l'envoi: ${error.text}`);
+            setAlertMessage(`Failed to send: ${error.text}`);
             setAlertType('error');
             setOpenAlert(true);
           }
@@ -92,7 +92,7 @@ const Contact = () => {
         <Grid item xs={12} sm={6}>
           <StyledForm ref={form} onSubmit={sendEmail}>
             <StyledTextField 
-              label="Nom" 
+              label="Name" 
               variant="outlined" 
               fullWidth 
               margin="normal" 
@@ -130,7 +130,7 @@ const Contact = () => {
               InputLabelProps={{ style: { fontSize: '1rem' } }} 
             />
             <StyledFormButton type="submit" variant="contained" color="primary" disabled={!isFormValid}>
-              Envoyer
+              Send
             </StyledFormButton>
           </StyledForm>
         </Grid>
